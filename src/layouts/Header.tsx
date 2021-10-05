@@ -1,14 +1,16 @@
 import React from "react"
+import { NavLink } from "react-router-dom"
+import { PATH } from "../constants/paths"
 
 const Header = () => {
   return (
     <header className="header_section">
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg custom_nav-container ">
-          <a className="navbar-brand" href="index.html">
-            <span>Linhmups</span>
-          </a>
-
+        
+          <NavLink to={PATH.HOME} className="navbar-brand" >
+            <span>Ecotrics</span>
+                </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,25 +26,41 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav">
               <li className="nav-item active">
-                <a className="nav-link" href="index.html">
-                  Home <span className="sr-only">(current)</span>
-                </a>
+                <NavLink to={PATH.HOME} className="nav-link" >
+                  Home <span className="sr-only"></span>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="watches.html">
+                <NavLink to={PATH.PRODUCT} className="nav-link" >
+                    Product <span className="sr-only"></span>
+                  </NavLink>
+                </li>
+              <li className="nav-item">
+                <a className="nav-link" href="about.html">
                   {" "}
-                  Watches{" "}
+                  Mouse{" "}
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="about.html">
                   {" "}
-                  About{" "}
+                  Keyboard{" "}
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="about.html">
+                  {" "}
+                  Monitor{" "}
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="contact.html">
-                  Contact Us
+                  CPU
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="contact.html">
+                  VGA
                 </a>
               </li>
             </ul>

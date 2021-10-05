@@ -292,6 +292,7 @@ a:focus {
   background-color: #f0d43a;
   border-radius: 0 0 0 250px;
   background: #3b4a6b;
+  margin-left: 30px;
 }
 
 .slider_section .row {

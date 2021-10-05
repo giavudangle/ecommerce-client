@@ -18,7 +18,7 @@ const ProductList = () => {
                     <h6>Smartwatch</h6>
                     <h6>
                       Price:
-                      <span>$300</span>
+                      <span> 300.000 VND</span>
                     </h6>
                   </div>
                   <div className="new">

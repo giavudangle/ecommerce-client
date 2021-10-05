@@ -1,13 +1,16 @@
 import React from "react"
-import { Router } from "react-router-dom"
+import { BrowserRouter, Router } from "react-router-dom"
 import HomeRoutes from "./HomeRoutes"
+import ProductRoutes from "./ProductRoutes"
 
-import { useHistory } from "react-router"
+import useHistory from "../utils/useHistory"
+
 
 const Routes = () => {
   return (
-    <Router history={useHistory()}>
+    <Router history={useHistory}>
       <HomeRoutes />
+      <ProductRoutes/>
     </Router>
   )
 }

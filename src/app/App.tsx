@@ -1,10 +1,12 @@
-import React from "react"
 import Routes from "../routes"
 
-import AppContainer from '../layouts/AppContainer';
+
+
 
 function App() {
-  return <AppContainer />
+  return (
+    <Routes/>
+  )
 }
 
 export default App
