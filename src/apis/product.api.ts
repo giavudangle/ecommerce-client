@@ -53,30 +53,31 @@ export const createProductApi = (
 ): Promise<IResponseCreateProductItemApi> => {
   return new Promise((resolve, reject) => {
     rootApi
-      .post(`/products`,data)
-      .then(res => resolve({
-        data:{
-          product:res.data,       
-        },
-        message: HTTP_RESPONSE_MESSAGE.SUCCESS,
-        code: HTTP_RESPONSE_CODE.SUCCESS,
-        status: HTTP_RESPONSE_STATUS.SUCCESS
-      }))
+      .post(`/products`, data)
+      .then(res =>
+        resolve({
+          data: {
+            product: res.data
+          },
+          message: HTTP_RESPONSE_MESSAGE.SUCCESS,
+          code: HTTP_RESPONSE_CODE.SUCCESS,
+          status: HTTP_RESPONSE_STATUS.SUCCESS
+        })
+      )
       .catch(e => reject(e))
   })
 }
 
-export const deleteProductApi = (id : string) :Promise<IProductDelete> => {
-  return new Promise((resolve,reject) => {
-    rootApi.delete<IProductDelete>(`/products/${id}`)
-    .then(response => {
-      resolve({
-        status:response.status,
-        message: HTTP_RESPONSE_MESSAGE.SUCCESS,    
+export const deleteProductApi = (id: string): Promise<IProductDelete> => {
+  return new Promise((resolve, reject) => {
+    rootApi
+      .delete<IProductDelete>(`/products/${id}`)
+      .then(response => {
+        resolve({
+          status: response.status,
+          message: HTTP_RESPONSE_MESSAGE.SUCCESS
+        })
       })
-    })
-    .catch(e => reject(e))
+      .catch(e => reject(e))
   })
 }
-
-

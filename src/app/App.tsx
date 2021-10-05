@@ -1,15 +1,10 @@
 import React from "react"
 import Routes from "../routes"
-import { ThemeProvider } from "@material-ui/styles"
-import { useTheme } from "../hooks/useAppStyles"
-import { Button } from "@material-ui/core"
+
+import AppContainer from '../layouts/AppContainer';
 
 function App() {
-  return (
-    <ThemeProvider theme={useTheme}>
-      <Routes />
-    </ThemeProvider>
-  )
+  return <AppContainer />
 }
 
 export default App

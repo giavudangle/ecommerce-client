@@ -12,7 +12,6 @@ const composeEnhancers =
 const enhancer = composeEnhancers(applyMiddleware(thunk))
 
 export const store = createStore(reducers, enhancer)
-
 export type RootStateType = ReturnType<typeof store.getState>
 
 export type AppDispatchType = typeof store.dispatch

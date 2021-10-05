@@ -32,9 +32,7 @@ interface IProductItemCreate {
   publisherId: string
 }
 
-interface IProductDelete extends IHttpResponse {
-
-}
+interface IProductDelete extends IHttpResponse {}
 
 interface IResponseCreateProductItemApi extends IHttpResponse {
   data: {
